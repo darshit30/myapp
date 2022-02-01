@@ -5,7 +5,6 @@ class MyDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var decoration;
     return Drawer(
       child: ListView(
         children: const <Widget>[
@@ -15,7 +14,8 @@ class MyDrawer extends StatelessWidget {
             currentAccountPicture: CircleAvatar(
               radius: 50.0,
               backgroundColor: Colors.black,
-              //backgroundImage: NetworkImage("http://timeye.com/images/widgets/mona.jpg"),
+              //backgroundImage:
+              //   NetworkImage("http://timeye.com/images/widgets/mona.jpg"),
             ),
           ),
           ListTile(
@@ -24,7 +24,7 @@ class MyDrawer extends StatelessWidget {
             //subtitle: Text("personal"),
             trailing: Icon(Icons.edit_outlined),
             iconColor: Colors.black,
-            tileColor: Colors.blueAccent,
+            tileColor: Colors.white,
           ),
           ListTile(
             leading: Icon(Icons.settings_outlined),

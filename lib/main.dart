@@ -1,15 +1,25 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/home_page.dart';
-void main(){
+
+import 'loginpage.dart';
+
+void main() {
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: HomePage(),
+    return MaterialApp(
+      home: const HomePage(),
+      theme: ThemeData(
+        primarySwatch: Colors.red,
+      ),
+      routes: {
+        "/login": (context) => LoginPage(),
+        "/home": (context) => HomePage()
+      },
     );
   }
 }
