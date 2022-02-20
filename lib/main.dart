@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/home_page.dart';
 
+import 'DrawerMenu/account.dart';
 import 'loginpage.dart';
 
 void main() {
@@ -12,13 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: const HomePage(),
+      home: const LoginPage(),
       theme: ThemeData(
-        primarySwatch: Colors.red,
+        primarySwatch: Colors.lightBlue,
       ),
       routes: {
-        "/login": (context) => LoginPage(),
-        "/home": (context) => HomePage()
+        "/login": (context) => const LoginPage(),
+        "/home": (context) => const HomePage(),
+        "/account": (context) => const AccountPage()
       },
     );
   }

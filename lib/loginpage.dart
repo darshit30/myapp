@@ -14,10 +14,15 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(title: const Text("Login Page")),
+      //  appBar: AppBar(title: const Text("Login Page")),
         body: Stack(
           fit: StackFit.passthrough,
           children: <Widget>[
+        Image.asset(
+        'assets/images/images1.jpg',
+          width: 600.0,
+          height: 240.0,
+          fit: BoxFit.cover,),
             Center(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -30,12 +35,14 @@ class _LoginPageState extends State<LoginPage> {
                           child: Form(
                               child: Column(
                             children: <Widget>[
+
                               const SizedBox(
                                 height: 20,
                               ),
+
                               TextFormField(
                                 decoration: const InputDecoration(
-                                    hintText: "Enter Username",
+                                    hintText: "Enter  Username",
                                     labelText: "User Name"),
                               ),
                               TextFormField(
@@ -55,6 +62,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: ElevatedButton(
+                              clipBehavior: Clip.antiAlias,
                               onPressed: () {
                                 //Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const Homepage()));
                                 Navigator.of(context).push(MaterialPageRoute(
